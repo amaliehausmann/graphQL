@@ -1,14 +1,10 @@
 export const navLinks = [
     {
       link: "/",
-      title: "Home",
+      title: "Movies",
     },
     {
-      link: "/about",
-      title: "About",
-    },
-    {
-      link: "/search",
-      title: "Search",
+      link: "/characters",
+      title: "Characters",
     },
   ];

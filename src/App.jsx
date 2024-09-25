@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout";
-import { Home } from "./pages/Home";
+import { Movies } from "./pages/Movies";
 import { Search } from "./pages/Search";
-import { About } from "./pages/About";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Characters } from "./pages/Characters";
+import { SingleCharacter } from "./pages/SingleCharacter";
 
 function App() {
   const queryClient = new QueryClient();
@@ -14,9 +15,10 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<MainLayout />}>
-              <Route index element={<Home />}></Route>
-              <Route path="/about" element={<About />}></Route>
-              <Route path="/search/:filmID" element={<Search />}></Route>
+              <Route index element={<Movies />}></Route>
+              <Route path="/search" element={<Search />}></Route>
+              <Route path="/characters" element={<Characters />}></Route>
+              <Route path="/singlecharacter/:characterId" element={<SingleCharacter/>}></Route>
             </Route>
           </Routes>
         </Router>

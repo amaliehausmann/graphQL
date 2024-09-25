@@ -1,0 +1,12 @@
+@use '../../styles/placeholder' as *;
+
+.searchContainer{
+    background-color: #101010;
+    @extend %Starwars;
+    input{
+        &::placeholder{
+            font-size: 1rem;
+            color: #a57d18;
+        }
+    }
+}

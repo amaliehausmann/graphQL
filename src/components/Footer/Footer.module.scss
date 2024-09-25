@@ -1,0 +1,9 @@
+@use '../../styles/placeholder' as *;
+
+.footer{
+    @extend %Starwars;
+    padding: 2rem;
+    h4{
+        margin: 0;
+    }
+}
