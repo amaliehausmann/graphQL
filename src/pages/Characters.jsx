@@ -3,6 +3,7 @@ import request from "graphql-request";
 import React from "react";
 import { AllCharacters } from "../queries/AllCharacters";
 import { Link } from "react-router-dom";
+import { CharacterWrapper } from "../components/CharacterWrapper/CharacterWrapper";
 
 export const Characters = () => {
   const { data, isLoading, error } = useQuery({
@@ -23,14 +24,16 @@ export const Characters = () => {
   }
 
   return (
-    <div>
-      <ul>
-        {data.allPeople.people
-          .sort((a, b) => a.name.localeCompare(b.name))
-          .map((item) => (
-            <Link to={`/singlecharacter/${item.id}`} key={item.id}>{item.name}</Link>
-          ))}
-      </ul>
-    </div>
+      <CharacterWrapper>
+        <ul>
+          {data.allPeople.people
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((item) => (
+              <li key={item.id}>
+                <Link to={`/singlecharacter/${item.id}`}>{item.name}</Link>
+              </li>
+            ))}
+        </ul>
+      </CharacterWrapper>
   );
 };

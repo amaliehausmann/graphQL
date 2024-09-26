@@ -1,9 +1,21 @@
 @use '../../styles/placeholder' as *;
 
 .footer{
-    @extend %Starwars;
+    @extend %starwars;
     padding: 2rem;
+    background-color: #181718;
+    color: white;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    text-shadow: 1px 1px 2px #044fda, 0 0 1em #044fda, 0 0 0.2em #044fda;
     h4{
         margin: 0;
+    }
+    @media (min-width: 1000px){
+        h3{
+            font-size: 2vw;
+        }
+        h4{
+            font-size: 1.5vw;
+        }
     }
 }

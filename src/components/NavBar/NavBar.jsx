@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../navlinks";
-import style from './NavBar.module.scss'
+import style from "./NavBar.module.scss";
 
-export const NavBar = ({action}) => {
+export const NavBar = () => {
   return (
-    <nav>
+    <nav className={style.navbarStyling}>
       {navLinks.map((item) => (
         <NavLink
           key={item.title}
@@ -17,7 +17,6 @@ export const NavBar = ({action}) => {
           {item.title}
         </NavLink>
       ))}
-      <li onClick={action}>Search</li>
     </nav>
   );
 };

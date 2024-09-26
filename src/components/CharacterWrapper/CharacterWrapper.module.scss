@@ -1,0 +1,52 @@
+@use "../../styles/placeholder" as *;
+
+.wrapperStyling {
+  display: flex;
+  flex-direction: column;
+  background-color: #232223;
+  padding-top: 4vw;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li {
+      list-style: none;
+      padding: 2vw 0;
+      cursor: pointer;
+
+      &:hover {
+        a {
+          text-shadow: 1px 1px 2px #af04da, 0 0 1em #af04da, 0 0 0.2em #af04da;
+        }
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 8vw;
+        @extend %starwars;
+        text-shadow: 1px 1px 2px #044fda, 0 0 1em #044fda, 0 0 0.2em #044fda;
+      }
+    }
+  }
+
+  @media (min-width: 1000px) {
+    ul {
+      li {
+        min-width: 100%;
+        text-align: center;
+        padding: 1vw 0;
+        &:hover {
+          background-color: #100f10;
+          transition: 200ms;
+        }
+        a {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}

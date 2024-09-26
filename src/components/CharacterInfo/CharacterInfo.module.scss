@@ -1,0 +1,79 @@
+@use '../../styles/placeholder' as *;
+
+.characterStyling{
+    background-color: #232223;
+    padding-top: 8vw;
+    padding-bottom: 10vw;
+
+        h1{
+            @extend %starwars;
+            display: block;
+            text-align: center;
+            margin-top: 0;
+            font-size: 8vw;
+            color: white;
+            text-shadow: 1px 1px 2px #044fda, 0 0 1em #044fda, 0 0 0.2em #044fda;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+        }
+
+        h3{
+            font-size: 6vw;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        span{
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+
+        ul{
+            padding: 0;
+
+            li{
+                @extend %starwars;
+                color: white;
+                text-shadow: 1px 1px 2px #044fda, 0 0 1em #044fda, 0 0 0.2em #044fda;
+                list-style: none;
+                font-size: 6vw;
+                text-align: center;
+                
+            }
+        }
+        img{
+            width: 50vw;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+            filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+        }
+
+        @media (min-width: 1000px){
+            padding-top: 6vw;
+            padding-bottom: 8vw;
+        
+                h1{
+                    font-size: 3vw;
+                    letter-spacing: 4px;
+                }
+        
+                h3{
+                    font-size: 1.5vw;
+                }
+        
+                ul{
+                   
+        
+                    li{
+                        font-size: 3vw;
+                    }
+                }
+                img{
+                    width: 20vw;
+                }
+        
+        }
+}
+

@@ -1,0 +1,36 @@
+@use "../../styles/placeholder" as *;
+
+.movieWrapper {
+  background-color: #181718;
+  padding: 10vw 0;
+  ul {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    color: white;
+    font-size: 7vw;
+    @extend %starwars;
+    padding: 0 2vw;
+    li {
+      padding: 3vw 0;
+      text-shadow: 1px 1px 2px #da0404, 0 0 1em #da0404, 0 0 0.2em #da0404;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    padding: 1vw 0;
+    ul {
+      font-size: 3vw;
+      li {
+        padding: 1vw 0;
+        &:hover {
+          cursor: pointer;
+          background-color: #100f10;
+          transition: 200ms;
+          text-shadow: 1px 1px 2px #2bda04, 0 0 1em rgb(47, 255, 0), 0 0 0.2em rgb(64, 255, 0);
+
+        }
+      }
+    }
+  }
+}

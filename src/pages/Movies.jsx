@@ -5,6 +5,7 @@ import { singleFilm } from "../queries/singleFilm";
 import { Modal } from "../components/Modal/Modal";
 import { useState } from "react";
 import { Footer } from "../components/Footer/Footer";
+import { MovieWrapper } from '../components/MovieWrapper/MovieWrapper'
 
 export const Movies = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -51,7 +52,7 @@ export const Movies = () => {
   }
 
   return (
-    <div>
+    <MovieWrapper>
       <ul>
         {allFilmsData.allFilms.films.map((item) => (
           <li onClick={() => handleSingleFilmClick(item.id)} key={item.id}>
@@ -71,7 +72,6 @@ export const Movies = () => {
           action={() => closeModal()}
         />
       )}
-      <Footer />
-    </div>
+    </MovieWrapper>
   );
 };
